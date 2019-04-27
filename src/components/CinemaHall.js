@@ -19,7 +19,7 @@ export class CinemaHall extends React.Component {
       seat.choice = false
       return seat.row
     });
-
+    /* собираем уникальный список */
     this.setState({
       rows: [...new Set(rows)]
     });
@@ -29,11 +29,13 @@ export class CinemaHall extends React.Component {
   reserveSeatHandler = (seat, index) => {
     let seatsNew = this.state.seatsJSX;
     let seatNew = seatsNew.find(item => item.id === seat.id);
-
+    /* если не занято место */
     if (!seatNew.status) {
-      seatNew.choice = !seatNew.choice
-
-      if (seatNew.choice === true) {
+      /* помечаем как выбранное */
+      seatNew.choice = !seatNew.choice;
+      /* если выбранное */
+      if (seatNew.choice) {
+        /* считаем сумму билета/ов */
         this.setState({
           priceAll: (Number(seatNew.price) + this.state.priceAll)
         });
@@ -44,50 +46,60 @@ export class CinemaHall extends React.Component {
       }
     }
 
-    this.setState(state => {
-      let choiceSeat = state.choiceSeats.push(seatNew);
-      return {
-        choiceSeat
-      }
-    });
-
     this.setState({
-      seat: this.state.seatsJSX[index],
-      // showModal: true
+      seat: this.state.seatsJSX[index]
     });
   };
 
   /* сброс данных */
   clearData = () => {
+    /* аналогично кнопке Reserved */
+    if (this.state.priceAll > 0) {
+      let seats = this.state.seatsJSX;
 
-    let seats = this.state.seatsJSX;
-    let seatsReset = seats.map(seat => {
-      seat.choice = false;
-      return seat;
-    });
+      let seatsReset = seats.map(seat => {
+        seat.choice = false;
+        return seat;
+      });
 
-
-    this.setState({
-      choiceSeats: [],
-      priceAll: 0,
-      seatsJSX: seatsReset
-    });
+      this.setState({
+        priceAll: 0,
+        seatsJSX: seatsReset
+      });
+    }
   };
 
-  saveReservedSeatHandler = () => {
-    this.setState({
-      showModal: true
-    });
+  /* открываем модальное окно */
+  showModal = () => {
+    /* нет смысла открывать окно без выбранных мест */
+    if (this.state.priceAll > 0) {
+      this.setState({
+        showModal: true
+      });
+    }
   };
 
   /* меняем статус брони, если место свободно */
-  changeStatusSeatHandler = (seat, flag) => {
-    let seatsNew = this.state.seatsJSX;
-    let seatNew = seatsNew.find(item => item.id === seat.id);
-
+  changeStatusSeatHandler = (flag) => {
+    console.log(flag)
+    let seatsNew = [];
+    /* если нажали бронировать */
     if (flag) {
-      seatNew.status = flag
+      /* места выбранные помеччаем как бронированые */
+      seatsNew = this.state.seatsJSX.map(seat => {
+        if (seat.choice) {
+          seat.status = true;
+          seat.choice = false
+        }
+        return seat;
+      });
+
+      this.setState({
+        seatsJSX: seatsNew
+      });
     }
+
+    this.clearData();
 
     this.setState({
       showModal: !this.state.showModal
@@ -140,8 +152,8 @@ export class CinemaHall extends React.Component {
           </div>
         </div>
         <div className='button-cinema-hall'>
-          <button onClick={this.saveReservedSeatHandler}>Reserved</button>
-          <button onClick={this.clearData}>Reset</button>
+          <button onClick={this.showModal} className={this.state.priceAll > 0 ? null : 'disabled-button'}>Reserved</button>
+          <button onClick={this.clearData} className={this.state.priceAll > 0 ? null : 'disabled-button'}>Reset</button>
         </div>
         {/*компонент модального окна*/}
         <ModalWindow

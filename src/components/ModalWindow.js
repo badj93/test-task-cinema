@@ -13,19 +13,15 @@ export class ModalWindow extends React.Component {
     })
   };
 
+  /* вызов метода из CinemaHall */
   showInputPhone = (flag) => {
+    /* проверяем чтоб был полный номер */
     if (this.state.phone.length === 12) {
-      this.props.changeStatusSeatHandler(this.props.seat, flag)
+      this.props.changeStatusSeatHandler(flag)
     }
-
-    this.setState({
-      phone: ''
-    })
   };
 
   render() {
-
-    let flag = true;
 
     let phoneSelector = document.getElementsByClassName('input-phone');
     let mask = new InputMask("+7(999)-999-99-99");
@@ -35,16 +31,16 @@ export class ModalWindow extends React.Component {
       <div style={this.props.showModal ? null : {position: "absolute"}}>
         <div className={this.props.showModal ? 'overlay' : 'hidden'}></div>
         <div className={this.props.showModal ? 'modal' : 'hidden'}>
-          <span className="close-modal" onClick={this.props.changeStatusSeatHandler}></span>
+          <span className="close-modal" onClick={this.props.changeStatusSeatHandler.bind(this, false)}></span>
           <p className="desc">Price All: ${this.props.price}</p>
           {
-            this.props.seat.status
+            this.props.price === 0
             ? null
             : <input placeholder="Input number phone" className='input-phone' id="input-phone"  type="text" onChange={this.inputPhone}/>
           }
           <button
             className="btn-modal"
-            onClick={this.showInputPhone.bind(this, flag)}
+            onClick={this.showInputPhone.bind(this, true)}
           >
             Reserved
           </button>

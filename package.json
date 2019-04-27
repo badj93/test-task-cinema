@@ -2,6 +2,7 @@
   "name": "cinema",
   "version": "0.1.0",
   "private": true,
+  "homepage": "test-task-cinema/build",
   "dependencies": {
     "inputmask": "^4.0.8",
     "react": "^16.8.6",
