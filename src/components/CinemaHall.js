@@ -81,7 +81,6 @@ export class CinemaHall extends React.Component {
 
   /* меняем статус брони, если место свободно */
   changeStatusSeatHandler = (flag) => {
-    console.log(flag)
     let seatsNew = [];
     /* если нажали бронировать */
     if (flag) {
