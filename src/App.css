@@ -21,7 +21,12 @@
 
 header {
   position: relative;
-  height: 300px;
+  height: 100px;
+  text-align: center;
+}
+
+.content {
+  height: 360px;
 }
 
 .content h2 {
@@ -30,15 +35,20 @@ header {
 
 .content .seats .seat {
   width: 25px;
+  display: flex;
   height: 30px;
   background-color: rebeccapurple;
   cursor: pointer;
   border-radius: 3px;
   transition: .3s;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 10px;
 }
 
 .content .seats .seat.busy {
-  background-color: #61dafb;
+  background-color: #2255fb;
 }
 
 .content .seats .seat:hover {
@@ -56,25 +66,65 @@ header {
 }
 
 .content .legend {
-  display: block;
-  float: right;
-  right: 235px;
   position: relative;
   top: 20px;
+  grid-column: 2;
 }
 
 .content .legend .seat {
   width: 25px;
   height: 30px;
+  border-radius: 3px;
 }
 
-.content .legend .seat:nth-child(1) {
-  background-color: #61dafb;
+.content .legend .group:nth-child(1) .seat {
+  background-color: rebeccapurple;
   margin-bottom: 1em;
 }
 
-.content .legend .seat:nth-child(2) {
-  background-color: rebeccapurple;
+.content .legend .group:nth-child(2) .seat {
+  background-color: #2255fb;
+}
+
+.content .legend .group:nth-child(3) .seat {
+  background-color: #17fb9a;
+}
+
+.content .legend .group {
+  display: inline-flex;
+  margin-right: 17px;
+}
+
+.content .legend .group span {
+  padding-top: 4px;
+  padding-left: 20px;
+}
+
+.content .button-cinema-hall {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 40px;
+}
+
+.content .button-cinema-hall button {
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: none;
+  display: block;
+  cursor: pointer;
+  font-size: 22px;
+  transition: .3s;
+  margin: 0 10px;
+}
+
+.content .button-cinema-hall button:nth-child(1) {
+  background-color: #17fb9a;
+  color: white;
+}
+
+.content .button-cinema-hall button:hover {
+  opacity: .8;
 }
 
 .App-link {
@@ -82,9 +132,117 @@ header {
 }
 
 .container {
+  display: grid;
+  grid-template-columns: 30px auto;
+  justify-content: center;
+  grid-gap: 10px;
+  grid-auto-rows: minmax(auto, 100%) 1fr 3em;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  background-color: black;
+  opacity: .8;
+  transition: 0.5s;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.show-modal {
+  opacity: 1;
+  transition: 1s;
+}
+
+.modal {
+  width: 500px;
+  height: 350px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: #fff;
+  z-index: 999;
+  transition: 0.5s;
+  opacity: 1;
+  border-radius: 3px;
+}
+
+.modal .close-modal {
+  background: url("img/close_icon.png") 0 0 no-repeat;
+  width: 30px;
+  height: 30px;
+  background-size: cover;
   display: block;
-  width: 900px;
+  cursor: pointer;
+  float: right;
+  position: relative;
+  right: 10px;
+  top: 10px;
+  transition: .3s;
+}
+
+.modal .close-modal:hover {
+  opacity: .7;
+  transition: .3s;
+}
+
+.modal .desc {
+  color: #282c34;
+  font-size: 24px;
+  text-align: center;
+  padding: 10px 10px;
+}
+
+.modal .btn-modal {
+  padding: 10px 20px;
+  border-radius: 3px;
+  border: none;
   margin: 0 auto;
+  display: block;
+  cursor: pointer;
+  font-size: 22px;
+  transition: .3s;
+}
+
+.modal .input-phone {
+  height: 40px;
+  width: 300px;
+  display: block;
+  border-radius: 3px;
+  border: 1px solid;
+  margin: 0 auto 40px;
+  font-size: 20px;
+  padding-left: 20px;
+  text-align: center;
+}
+
+.modal .btn-modal:hover {
+  opacity: .7;
+  transition: .3s;
+}
+
+.content .rows {
+  display: grid;
+  grid-row-gap: 15px;
+  align-items: center;
+  justify-content: center;
+  background: beige
+}
+
+footer {
+  text-align: center;
+  position: relative;
+  top: 50px;
 }
 
 

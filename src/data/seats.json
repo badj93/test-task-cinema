@@ -3,300 +3,400 @@
     "id": "1",
     "class": "vip",
     "price": "800",
-    "status": "1"
+    "status": true,
+    "number": "1",
+    "row": "A"
   },
   {
     "id": "2",
     "class": "just",
     "price": "800",
-    "status": "0"
+    "status": false,
+    "number": "2",
+    "row": "A"
   },
   {
     "id": "3",
     "class": "just",
     "price": "300",
-    "status": "0"
+    "status": true,
+    "number": "3",
+    "row": "A"
   },
   {
     "id": "4",
     "class": "vip",
     "price": "800",
-    "status": "1"
+    "status": false,
+    "number": "4",
+    "row": "A"
   },
   {
     "id": "5",
     "class": "vip",
     "price": "800",
-    "status": "0"
+    "status": true,
+    "number": "5",
+    "row": "A"
   },
   {
     "id": "6",
     "class": "just",
     "price": "300",
-    "status": "1"
+    "status": false,
+    "number": "6",
+    "row": "A"
   },
   {
     "id": "7",
     "class": "just",
     "price": "300",
-    "status": "0"
+    "status": false,
+    "number": "7",
+    "row": "A"
   },
   {
     "id": "8",
     "class": "vip",
     "price": "800",
-    "status": "0"
+    "status": false,
+    "number": "8",
+    "row": "A"
   },
   {
     "id": "9",
     "class": "just",
     "price": "300",
-    "status": "0"
+    "status": true,
+    "number": "9",
+    "row": "A"
   },
   {
     "id": "10",
     "class": "just",
     "price": "300",
-    "status": "1"
+    "status": false,
+    "number": "10",
+    "row": "A"
   },
   {
     "id": "11",
     "class": "vip",
     "price": "800",
-    "status": "0"
+    "status": false,
+    "number": "1",
+    "row": "B"
   },
   {
     "id": "12",
     "class": "vip",
     "price": "800",
-    "status": "1"
+    "status": false,
+    "number": "2",
+    "row": "B"
   },
   {
     "id": "13",
     "class": "just",
     "price": "800",
-    "status": "0"
+    "status": true,
+    "number": "3",
+    "row": "B"
   },
   {
     "id": "14",
     "class": "just",
     "price": "300",
-    "status": "0"
+    "status": false,
+    "number": "4",
+    "row": "B"
   },
   {
     "id": "15",
     "class": "vip",
     "price": "800",
-    "status": "1"
+    "status": false,
+    "number": "5",
+    "row": "B"
   },
   {
     "id": "16",
     "class": "vip",
     "price": "800",
-    "status": "0"
+    "status": true,
+    "number": "6",
+    "row": "B"
   },
   {
     "id": "17",
     "class": "just",
     "price": "300",
-    "status": "1"
+    "status": false,
+    "number": "7",
+    "row": "B"
   },
   {
     "id": "18",
     "class": "just",
     "price": "300",
-    "status": "0"
+    "status": false,
+    "number": "8",
+    "row": "B"
   },
   {
     "id": "19",
     "class": "vip",
     "price": "800",
-    "status": "0"
+    "status": true,
+    "number": "9",
+    "row": "B"
   },
   {
     "id": "20",
     "class": "just",
     "price": "300",
-    "status": "0"
+    "status": false,
+    "number": "10",
+    "row": "B"
   },
   {
     "id": "21",
     "class": "just",
     "price": "300",
-    "status": "1"
+    "status": false,
+    "number": "1",
+    "row": "C"
   },
   {
     "id": "22",
     "class": "vip",
     "price": "800",
-    "status": "0"
+    "status": false,
+    "number": "2",
+    "row": "C"
   },
   {
     "id": "23",
     "class": "just",
     "price": "300",
-    "status": "0"
+    "status": true,
+    "number": "3",
+    "row": "C"
   },
   {
     "id": "24",
     "class": "vip",
     "price": "800",
-    "status": "0"
+    "status": false,
+    "number": "4",
+    "row": "C"
   },
   {
     "id": "25",
     "class": "just",
     "price": "300",
-    "status": "0"
+    "status": false,
+    "number": "5",
+    "row": "C"
   },
   {
     "id": "26",
     "class": "just",
     "price": "300",
-    "status": "1"
+    "status": false,
+    "number": "6",
+    "row": "C"
   },
   {
     "id": "27",
     "class": "vip",
     "price": "800",
-    "status": "0"
+    "status": false,
+    "number": "7",
+    "row": "C"
   },
   {
   "id": "28",
   "class": "vip",
   "price": "800",
-  "status": "1"
+  "status": false,
+    "number": "8",
+    "row": "C"
   },
   {
     "id": "29",
     "class": "vip",
     "price": "800",
-    "status": "0"
+    "status": false,
+    "number": "9",
+    "row": "C"
   },
   {
     "id": "30",
     "class": "just",
     "price": "300",
-    "status": "1"
+    "status": false,
+    "number": "10",
+    "row": "C"
   },
   {
     "id": "31",
     "class": "just",
     "price": "300",
-    "status": "0"
+    "status": true,
+    "number": "1",
+    "row": "D"
   },
   {
     "id": "32",
     "class": "vip",
     "price": "800",
-    "status": "0"
+    "status": true,
+    "number": "2",
+    "row": "D"
   },
   {
     "id": "33",
     "class": "just",
     "price": "300",
-    "status": "0"
+    "status": false,
+    "number": "3",
+    "row": "D"
   },
   {
     "id": "34",
     "class": "just",
     "price": "300",
-    "status": "1"
+    "status": false,
+    "number": "4",
+    "row": "D"
   },
   {
     "id": "35",
     "class": "vip",
     "price": "800",
-    "status": "0"
+    "status": false,
+    "number": "5",
+    "row": "D"
   },
   {
     "id": "36",
     "class": "just",
     "price": "300",
-    "status": "0"
+    "status": false,
+    "number": "6",
+    "row": "D"
   },
   {
     "id": "37",
     "class": "vip",
     "price": "800",
-    "status": "0"
+    "status": false,
+    "number": "7",
+    "row": "D"
   },
   {
     "id": "38",
     "class": "just",
     "price": "300",
-    "status": "0"
+    "status": false,
+    "number": "8",
+    "row": "D"
   },
   {
     "id": "39",
     "class": "just",
     "price": "300",
-    "status": "1"
+    "status": false,
+    "number": "9",
+    "row": "D"
   },
   {
     "id": "40",
     "class": "vip",
     "price": "800",
-    "status": "0"
+    "status": false,
+    "number": "10",
+    "row": "D"
   },
   {
     "id": "41",
     "class": "just",
     "price": "300",
-    "status": "0"
+    "status": false,
+    "number": "1",
+    "row": "E"
   },
   {
     "id": "42",
     "class": "vip",
     "price": "800",
-    "status": "0"
+    "status": false,
+    "number": "2",
+    "row": "E"
   },
   {
     "id": "43",
     "class": "just",
     "price": "300",
-    "status": "0"
+    "status": false,
+    "number": "3",
+    "row": "E"
   },
   {
     "id": "44",
     "class": "just",
     "price": "300",
-    "status": "1"
+    "status": false,
+    "number": "4",
+    "row": "E"
   },
   {
     "id": "45",
     "class": "vip",
     "price": "800",
-    "status": "0"
+    "status": false,
+    "number": "5",
+    "row": "E"
   },
   {
     "id": "46",
     "class": "just",
     "price": "300",
-    "status": "0"
+    "status": false,
+    "number": "6",
+    "row": "E"
   },
   {
     "id": "47",
     "class": "vip",
     "price": "800",
-    "status": "0"
+    "status": false,
+    "number": "7",
+    "row": "E"
   },
   {
     "id": "48",
     "class": "just",
     "price": "300",
-    "status": "0"
+    "status": false,
+    "number": "8",
+    "row": "E"
   },
   {
     "id": "49",
     "class": "just",
     "price": "300",
-    "status": "1"
+    "status": false,
+    "number": "9",
+    "row": "E"
   },
   {
     "id": "50",
     "class": "vip",
     "price": "800",
-    "status": "0"
+    "status": false,
+    "number": "10",
+    "row": "E"
   }
 ]

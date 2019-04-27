@@ -4,9 +4,7 @@ export class Header extends React.Component{
   render() {
     return (
       <header>
-        <div className="container">
-          <h1>Header</h1>
-        </div>
+        <h1>Cinema Hall</h1>
       </header>
     )
   }
