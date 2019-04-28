@@ -19,6 +19,9 @@ export class ModalWindow extends React.Component {
     if (this.state.phone.length === 12) {
       this.props.changeStatusSeatHandler(flag)
     }
+    this.setState({
+      phone: ''
+    })
   };
 
   render() {
